@@ -1,76 +1,100 @@
 :root {
-    --primary-color:  darkBlue;
-    --primary-background:  white;
-    --secondary-color: white;
-    --secondary-background: darkBlue;
     --font: "Eagle Lake", cursive;
     --font-size: 16px;
+
+    --primary-color: darkblue;
+    --secondary-color: white;
+    --tertiary-color: black;
+    --quaternary-color: color-mix(in srgb, var(--primary-color), transparent 75%);
+
+    --body-color: var(--tertiary-color);
+    --body-background: var(--quaternary-color);
+    --header-footer-color: var(--secondary-color);
+    --header-footer-background: var(--primary-color);
+    --menu-color: var(--secondary-color);
+    --menu-background: var(--tertiary-color);
+    --sidebar-color: var(--primary-color);
+    --sidebar-background: var(--secondary-color);
 }
 body {
     font-family: var(--font);
     font-size: var(--font-size);
-    color: var(--primary-color);
-    background-color: var(--primary-background);
+    color: var(--body-color);
+    background-color: var(--body-background);
     display: grid;
     grid-template: auto 1fr auto / auto 1fr auto;
     padding: .25rem;
 }
 header {
     grid-column: 1/4;
-    color: var(--secondary-color);
-    background-color: var(--secondary-background);
-    text-align: center;
-    padding: .25rem;
+    color: var(--header-footer-color);
+    background-color: var(--header-footer-background);
+    padding: 0;
+    text-align: left;
+}
+header h1 {
+    padding-left: 1rem;
 }
 nav {
     grid-column: 1/4;
+    color: var(--menu-color);
+    background-color: var(--menu-background);
     display: flex;
-    padding: .25rem;
+    width: 100%;
+    margin-top: 4rem;
+    padding: 0rem;
 }
 ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
     text-align: left;
-    padding: 0;
-    margin: 0 auto;
 }
 li {
-    padding: 1rem;
-    margin: 0;
     display: inline-flex;
+    width: 24.9%;
+    padding: 0;
+    margin: 0;
+}
+li h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 li:hover {
-    padding: 1rem 2rem;
-    margin: 0 1rem;
-    color: var(--primary-color);
-    background-color: var(--primary-background);
-    border: 1px solid var(--primary-color);
+    color: var(--menu-background);
+    background-color: var(--menu-color);
+    border: 1px solid var(--menu-background);
     border-radius: .5rem;
 }
 .left-sidebar {
-    padding: .5rem;
     grid-column: 1/2;
-    display: flex;
-    color: var(--secondary-color);
-    background-color: var(--secondary-background);
+    color: var(--sidebar-color);
+    background-color: var(--sidebar-background);
+    display: none;
 }
 main {
-    padding: 1rem;
     grid-column: 2/3;
-    width: 100%;
     display: block;
-    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 17rem;
+    text-align: left;
 }
 .right-sidebar {
-    padding: .5rem;
     grid-column: 3/4;
+    color: var(--sidebar-color);
+    background-color: var(--sidebar-background);
     display: flex;
-    color: var(--secondary-color);
-    background-color: var(--secondary-background);
+    padding-left: 1rem;
+    padding-right: 10rem;
 }
 footer {
-    padding: .25rem;
     grid-column: 1/4;
-    color: var(--secondary-color);
-    background-color: var(--secondary-background);
+    color: var(--header-footer-color);
+    background-color: var(--header-footer-background);
+    padding: 1rem;
+    padding-bottom: 7rem;
     text-align: center;
 }
