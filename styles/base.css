@@ -30,7 +30,7 @@ body {
     grid-template: auto 1fr auto / auto 1fr auto;
     padding: .25rem;
     text-align: left;
-    max-width: 1024px;
+    width: 1024px;
 }
 header {
     grid-column: 1/4;
