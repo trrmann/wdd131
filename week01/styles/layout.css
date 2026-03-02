@@ -1,0 +1,76 @@
+:root {
+    --primary-color:  darkBlue;
+    --primary-background:  white;
+    --secondary-color: white;
+    --secondary-background: darkBlue;
+    --font: "Eagle Lake", cursive;
+    --font-size: 16px;
+}
+body {
+    font-family: var(--font);
+    font-size: var(--font-size);
+    color: var(--primary-color);
+    background-color: var(--primary-background);
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+    padding: .25rem;
+}
+header {
+    grid-column: 1/4;
+    color: var(--secondary-color);
+    background-color: var(--secondary-background);
+    text-align: center;
+    padding: .25rem;
+}
+nav {
+    grid-column: 1/4;
+    display: flex;
+    padding: .25rem;
+}
+ul {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    margin: 0 auto;
+}
+li {
+    padding: 1rem;
+    margin: 0;
+    display: inline-flex;
+}
+li:hover {
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    color: var(--primary-color);
+    background-color: var(--primary-background);
+    border: 1px solid var(--primary-color);
+    border-radius: .5rem;
+}
+.left-sidebar {
+    padding: .5rem;
+    grid-column: 1/2;
+    display: flex;
+    color: var(--secondary-color);
+    background-color: var(--secondary-background);
+}
+main {
+    padding: 1rem;
+    grid-column: 2/3;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.right-sidebar {
+    padding: .5rem;
+    grid-column: 3/4;
+    display: flex;
+    color: var(--secondary-color);
+    background-color: var(--secondary-background);
+}
+footer {
+    padding: .25rem;
+    grid-column: 1/4;
+    color: var(--secondary-color);
+    background-color: var(--secondary-background);
+    text-align: center;
+}
