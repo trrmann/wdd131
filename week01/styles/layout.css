@@ -5,7 +5,7 @@
     --primary-color: darkblue;
     --secondary-color: white;
     --tertiary-color: black;
-    --quaternary-color: color-mix(in srgb, var(--primary-color), transparent 75%);
+    --quaternary-color: color-mix(in srgb, darkblue, transparent 75%);
 
     --body-color: var(--tertiary-color);
     --body-background: var(--quaternary-color);
