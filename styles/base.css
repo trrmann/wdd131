@@ -5,7 +5,7 @@
         --primary-color: darkblue;
         --secondary-color: white;
         --tertiary-color: black;
-        --quaternary-color: color-mix(in srgb, darkblue, transparent 75%);
+        --quaternary-color: color-mix(in srgb, darkblue, transparent 100%);
     
         --body-color: var(--tertiary-color);
         --body-background: var(--quaternary-color);
@@ -130,9 +130,10 @@ main h1 {
     height: 2rem;
 }
 .meinfo {
-    grid-column: 2/11;
+    grid-column: 1/11;
     grid-row: 2;
     margin: 0;
+    padding-left: 2rem;
 }
 .mephoto {
     grid-column: 11/14;
@@ -149,17 +150,20 @@ main h1 {
     height: 2rem;
 }
 .placeinfo {
-    grid-column: 5/11;
+    grid-column: 3/15;
     grid-row: 4;
     margin: 0;
 }
 .placephoto {
-    grid-column: 2/5;
+    grid-column: 1/3;
     grid-row: 4;
     margin: 0;
     margin-left: 1rem;
     margin-bottom: 1rem;
     padding: 0;
+    transform: rotate(90deg) scaleY(-1);
+    height: auto;
+    width: 100px;
 }
 .resourcelist {
     grid-column: 1/15;
@@ -203,7 +207,7 @@ main h1 {
 
 .card img {
     width: auto;
-    height: 100%;
+    height: 200px;
 }
 .leftsidebar {
     grid-column: 1/2;
