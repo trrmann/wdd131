@@ -1,6 +1,5 @@
 :root {
     --font: "Eagle Lake", cursive;
-        --font-size: 16px;
     
         --primary-color: darkblue;
         --secondary-color: white;
@@ -17,6 +16,7 @@
         --sidebar-background: var(--secondary-color);
 
         --relative-spacing-unit: .25rem;
+        --font-size: calc(4 * var(--relative-spacing-unit));
 }
 html {
     margin: 0 0 0 0;
