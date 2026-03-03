@@ -1,22 +1,21 @@
 :root {
+    --relative-spacing-unit: .25rem;
+    --font-size: calc(4 * var(--relative-spacing-unit));
     --font: "Eagle Lake", cursive;
     
-        --primary-color: darkblue;
-        --secondary-color: white;
-        --tertiary-color: black;
-        --quaternary-color: color-mix(in srgb, darkblue, transparent 100%);
+    --primary-color: darkblue;
+    --secondary-color: white;
+    --tertiary-color: black;
+    --quaternary-color: color-mix(in srgb, darkblue, transparent 100%);
     
-        --body-color: var(--tertiary-color);
-        --body-background: var(--quaternary-color);
-        --header-footer-color: var(--secondary-color);
-        --header-footer-background: var(--primary-color);
-        --menu-color: var(--secondary-color);
-        --menu-background: var(--tertiary-color);
-        --sidebar-color: var(--primary-color);
-        --sidebar-background: var(--secondary-color);
-
-        --relative-spacing-unit: .25rem;
-        --font-size: calc(4 * var(--relative-spacing-unit));
+    --body-color: var(--tertiary-color);
+    --body-background: var(--quaternary-color);
+    --header-footer-color: var(--secondary-color);
+    --header-footer-background: var(--primary-color);
+    --menu-color: var(--secondary-color);
+    --menu-background: var(--tertiary-color);
+    --sidebar-color: var(--primary-color);
+    --sidebar-background: var(--secondary-color);
 }
 html {
     margin: 0 0 0 0;
