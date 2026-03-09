@@ -1,0 +1,51 @@
+@media screen and (min-width: 500px) {
+    header {
+        display: flex;
+        padding: var(--no-spacing-unit-all-around );
+    }
+    #hamburgerMenu {
+        display: none;
+    }
+    #title {
+        width: calc(100% - var(--quad-spacing-unit));
+        display: block;
+        text-align: left;
+        padding: var(--quad-spacing-unit-left-only);
+        margin: var(--quad-spacing-unit-top-and-bottom-only);
+    }
+    nav {
+        margin: var(--no-spacing-unit-all-around );
+        color: var(--header-footer-color);
+        background-color: var(--header-footer-background);
+    }
+    .menulist {
+        text-align: center;
+        display: flex;
+        margin: var(--quad-spacing-unit-top-and-bottom-only);
+    }
+    .menuitem {
+        width: var(--full-size-menu-percent);
+        padding: var(--no-spacing-unit-all-around);
+        display: inline-flex;
+    }
+    .menuitem > p {
+        display: block;
+        text-align: center;
+    }
+    .menuitem .active {
+        border: 1px solid var(--menu-background);
+    }
+    .menuitem .active:hover {
+        color: var(--menu-color);
+        background-color: var(--menu-background);
+    }
+    main {
+        padding: var(--quad-spacing-unit-all-around);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    main h1 {
+        grid-column: 1/4;
+    }
+}

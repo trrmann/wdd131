@@ -1,0 +1,35 @@
+:root {
+    --font-family: "Roboto";
+    --max-width: 640px;
+    --spacing-unit:  .25rem;
+    --centering-margin: calc(4 * var(--spacing-unit)) auto;
+    --transparent-black: color-mix(in srgb, black, transparent 75%);;
+    --transparent-blue: color-mix(in srgb, blue, transparent 30%);
+    --light-blue: color-mix(in srgb, blue, white 50%);
+    --white:  white;
+    --black:  black;
+    --faint-border: 2px solid var(--transparent-black);
+    --common-padding: calc(2 * var(--spacing-unit)) calc(2 * var(--spacing-unit)) calc(2 * var(--spacing-unit)) calc(2 * var(--spacing-unit));
+    --background-color:  var(--transparent-blue);
+    --section-background-color: var(--light-blue);
+}
+body {
+    font-family: var(--font-family);
+    color: var(--black);
+}
+header, main, footer {
+    max-width: var(--max-width);
+    margin: var(--centering-margin);
+    border: var(--faint-border);
+    padding: var(--common-padding);
+    background-color: var(--background-color);
+}
+main {
+    display: grid;
+    grid-template-columns: auto;
+    gap: calc(4 * var(--spacing-unit));
+}
+section {
+    padding: var(--common-padding);
+    background-color: var(--section-background-color);
+}
