@@ -178,7 +178,7 @@ main h1 {
     margin: var(--quad-spacing-unit-all-around);
     border: 1px solid black;
     /*border-radius: var(--quad-spacing-unit-top-and-left-only);/**/
-    width: calc(100% - 1px - calc(2 * var(--quad-spacing-unit)));
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)) - 1px);
 }
 .card figcaption {
     text-align: center;
