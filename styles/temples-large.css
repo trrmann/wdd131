@@ -11,14 +11,17 @@
         display: block;
         text-align: left;
         padding: var(--quad-spacing-unit-left-only);
-        margin: var(--quad-spacing-unit-top-and-bottom-only);
+        margin: var(--quad-spacing-unit-right-only);
     }
     nav {
         margin: var(--no-spacing-unit-all-around );
         color: var(--header-footer-color);
         background-color: var(--header-footer-background);
+        width: 75%;
         display: flex;
         flex-direction: row;
+        position: absolute;
+        right: var(--quad-spacing-unit)
     }
     .menulist {
         text-align: center;

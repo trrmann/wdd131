@@ -34,6 +34,7 @@
     --quad-spacing-unit-left-only: 0 0 0 var(--quad-spacing-unit);
     --quad-spacing-unit-top-and-left-only: var(--quad-spacing-unit) var(--quad-spacing-unit) 0 0;
     --quad-spacing-unit-top-and-bottom-only: var(--quad-spacing-unit) 0 var(--quad-spacing-unit) 0;
+    --quad-spacing-unit-right-only: 0 var(--quad-spacing-unit) 0 0;
 }
 html {
     margin: var(--no-spacing-unit-all-around);
@@ -91,9 +92,10 @@ a:link, a:visited {
     width: var(--quad-spacing-unit);
     display: block;
     text-align: center;
-    position: fixed;
+    position: absolute;
     top: var(--quad-spacing-unit);
-    right: var(--quad-spacing-unit);
+    right: var(--sextuple-spacing-init);
+    font-size: var(--sextuple-spacing-init);
 }
 #title {
     border: 0px solid red;
@@ -166,8 +168,8 @@ main h1 {
 }
 .card {
     margin: var(--quad-spacing-unit-bottom-only);
-    border: 1px solid var(--body-color);
-    border-radius: var(--quad-spacing-unit);
+    /*border: 1px solid var(--body-color);
+    border-radius: var(--quad-spacing-unit);/**/
     width: auto;
     padding: var(--no-spacing-unit-all-around);
     display: block;
@@ -175,7 +177,7 @@ main h1 {
 .card > img {
     margin: var(--quad-spacing-unit-all-around);
     border: 1px solid black;
-    border-radius: var(--quad-spacing-unit-top-and-left-only);
+    /*border-radius: var(--quad-spacing-unit-top-and-left-only);/**/
     width: calc(100% - 1px - calc(2 * var(--quad-spacing-unit)));
 }
 .card figcaption {
