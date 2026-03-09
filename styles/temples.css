@@ -69,12 +69,16 @@ header {
     color: var(--header-footer-color);
     background-color: var(--header-footer-background);
 }
-p {
+a {
     margin: var(--no-spacing-unit-all-around);
     border: 0px solid red;
     width: 100%;
     display: block;
     padding: var(--no-spacing-unit-all-around);
+}
+a:link, a:visited {
+    color: var(--header-footer-color);
+    background-color: var(--header-footer-background);
 }
 #hamburgerMenu::after {
     content: "☰";
@@ -168,7 +172,7 @@ main h1 {
     padding: var(--no-spacing-unit-all-around);
     display: block;
 }
-.card img {
+.card > img {
     margin: var(--quad-spacing-unit-all-around);
     border: 1px solid black;
     border-radius: var(--quad-spacing-unit-top-and-left-only);

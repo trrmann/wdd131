@@ -17,10 +17,12 @@
         margin: var(--no-spacing-unit-all-around );
         color: var(--header-footer-color);
         background-color: var(--header-footer-background);
+        display: flex;
+        flex-direction: row;
     }
     .menulist {
         text-align: center;
-        display: flex;
+        display: inherit;
         margin: var(--quad-spacing-unit-top-and-bottom-only);
     }
     .menuitem {
