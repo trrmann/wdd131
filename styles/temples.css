@@ -179,6 +179,7 @@ main h1 {
     border: 1px solid black;
     /*border-radius: var(--quad-spacing-unit-top-and-left-only);/**/
     width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    aspect-ratio: 3 / 2;
 }
 .card figcaption {
     text-align: center;

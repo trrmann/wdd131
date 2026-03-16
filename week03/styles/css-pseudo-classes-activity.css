@@ -1,0 +1,75 @@
+:root {
+    --bord: 1px solid #777;
+    /*--no-bord: none;*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Acme', sans-serif;
+}
+
+h1 {
+    margin: 0.75rem;
+}
+
+main {
+    margin: 0.5rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    padding: 0.5rem;
+    background-color: #eee;
+}
+
+p {
+    margin: 1rem;
+}
+
+a:active,
+a:visited,
+a:link {
+    color: navy;
+}
+
+a:hover {
+    color: purple;
+}
+
+.datatable {
+    width: 200px;
+    margin-top: 2rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    align-items: center;
+    text-align: center;
+}
+.row:last-child {
+    border-bottom: var(--bord);
+    background-color: #bbb;
+}
+
+.col {
+    padding: 0.5rem;
+    /*border: var(--bord);
+    border-right: var(--no-bord);
+    border-bottom: var(--no-bord);*/
+    border-top: var(--bord);
+    border-left: var(--bord);
+}
+/*.col:last-child {
+    border-right: var(--bord);
+}*/
+.col:nth-child(even) {
+    border-right: var(--bord);
+}
