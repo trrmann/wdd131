@@ -1,0 +1,81 @@
+:root {
+    --Peru-flag-red:  rgb(85.1%,6.3%,13.7%);
+    --Peru-flag-white: rgb(100%,100%,100%);
+    --Peru-flag-gold:  rgb(90.6%,79.2%,0%);
+    --Peru-flag-green: rgb(0%,65.9%,32.9%);
+    --Peru-flag-blue: rgb(0%,49.4%,65.9%);
+
+    --page-background: var(--Peru-flag-white);
+    --page-color: var(--Peru-flag-red);
+    --page-accent: var(--Peru-flag-green);
+    --page-alt-accent: var(--Peru-flag-blue);
+
+    --header-background: var(--Peru-flag-gold);
+    --header-color: var(--page-background);
+    --header-accent: var(--page-color);
+    --header-alt-accent: var(--page-alt-accent);
+}
+html {
+    background-color: var(--page-background);
+    color: var(--page-color);
+}
+header, footer {
+    background-color: var(--header-background);
+    color: var(--header-color);
+    padding: .5rem;
+}
+header > div, footer > p {
+    background-color: var(--header-accent);
+    padding: 1rem;
+}
+header > div > h1 {
+    text-align: center;
+}
+.line {
+    background-color: var(--header-alt-accent);
+    padding: 0;
+    height: .5rem;
+}
+footer, footer > p {
+    padding: .25rem;
+    margin: 0;
+    text-align: center;
+}
+.hero {
+    background-color: var(--page-alt-accent);
+    padding-bottom: .25rem;
+}
+.hero > picture > img {
+    width: 100%;
+    aspect-ratio: 1500 / 1000;
+}
+.card {
+    background-color: var(--page-color);
+    color: var(--page-background);
+    margin: 1rem;
+}
+.card > h2 {
+    text-align: center;
+    padding: 1rem;
+}
+.card > div {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    gap: .25rem;
+    margin: .25rem;
+}
+.card > div > h3 {
+    grid-column: 2;
+    text-align: right;
+    margin: .25rem;
+}
+.card > div > p {
+    grid-column: 3;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin: .25rem;
+}
+.weather > img {
+    margin: 0 33%;
+    width: 33%;
+}
