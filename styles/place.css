@@ -15,7 +15,7 @@
     --header-accent: var(--page-color);
     --header-alt-accent: var(--page-alt-accent);
 }
-html {
+body {
     background-color: var(--page-background);
     color: var(--page-color);
 }
@@ -26,7 +26,7 @@ header, footer {
 }
 header > div, footer > p {
     background-color: var(--header-accent);
-    padding: 1rem;
+    padding: .5rem;
 }
 header > div > h1 {
     text-align: center;
