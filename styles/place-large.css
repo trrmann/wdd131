@@ -37,9 +37,21 @@
         bottom: .5rem;
         right: .5rem;
     }
-    .weather > img {
-        position: absolute;
-        top: 1.75rem;
+    .weather>h2 {
+        position: relative;
+        padding-right: 30px;
+    }
+    .weather > h2::after {
+        content: url("../images/mostlyCloudy.svg");
+        height: auto;
         width: 20%;
+        position: absolute;
+        right: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 10px;
+    }
+    .weather > img {
+        display: none;
     }
 }

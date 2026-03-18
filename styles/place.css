@@ -1,8 +1,10 @@
 :root {
-    --Peru-flag-red:  rgb(85.1%,6.3%,13.7%);
+    --Peru-flag-red:  rgb(85.1%,6.3%,13.7%);/*original fails contrast*/
+    --Peru-flag-red: rgb(69.1%, 6.3%, 13.7%);
     --Peru-flag-white: rgb(100%,100%,100%);
     --Peru-flag-gold:  rgb(90.6%,79.2%,0%);
-    --Peru-flag-green: rgb(0%,65.9%,32.9%);
+    --Peru-flag-green: rgb(0%, 65.9%, 32.9%);/*original fails contrast*/
+    --Peru-flag-green: rgb(0%, 39.5%, 32.9%);
     --Peru-flag-blue: rgb(0%,49.4%,65.9%);
 
     --page-background: var(--Peru-flag-white);
