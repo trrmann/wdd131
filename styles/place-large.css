@@ -42,7 +42,7 @@
         padding-right: 30px;
     }
     .weather > h2::after {
-        content: url("../images/mostlyCloudy.svg");
+        content: url("../images/mostlycloudy.svg");
         height: auto;
         width: 20%;
         position: absolute;
