@@ -38,13 +38,12 @@
         right: .5rem;
     }
     .weather>h2 {
-        /*position: relative;*/
-        /*padding-right: 15px;*/
+        position: relative;
+        padding-right: 15px;
         display: flex;
     }
-    /*
     .weather > h2::after {
-        content: url("../images/mostlycloudy.svg");
+        content: "⛅";
         height: auto;
         width: 20%;
         position: absolute;
@@ -52,12 +51,6 @@
         top: 50%;
         transform: translateY(-50%);
         margin-left: 10px;
-    }
-    /**/
-    .emoji-icon {
-        display: flex;
-        padding-left: 40px;
-        text-align: right;
     }
     .weather > img {
         display: none;
