@@ -146,8 +146,8 @@ function templecard(temple) {
     image.src = temple.imageUrl;
     image.alt = `Image of ${temple.templeName}`;
     image.loading = "lazy";
-    image.height = "250";
-    image.width = "400";
+    /*image.height = "250";
+    image.width = "400";/**/
     figure.appendChild(image);
     return figure;
 }
