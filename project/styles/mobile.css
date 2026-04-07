@@ -252,14 +252,16 @@ main h1 {
     grid-column: 3/13;
     grid-row: 5;
     vertical-align: middle;
+    height: calc(2.5*1rem);
+    width: calc(2.5*2.8537095088819226750261233019854rem);
 }
 .logo-img {
-    height: 1rem;
-    width: auto;
     margin-bottom: 0;
     padding-bottom: 0;
     margin-top: 0;
     padding-top: 0;
+    height: calc(1*1rem);
+    width: calc(1*2.8537095088819226750261233019854rem);
 }
 .purpose {
     grid-row: 3;
