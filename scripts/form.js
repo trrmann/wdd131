@@ -26,6 +26,15 @@ const products = [
   }
 ];
 const productNameElement = document.querySelector("#product-name");
-products.forEach(product => {
-    productNameElement.add(new Option(product.name, product.id));
-});
+if (productNameElement !== null) {
+    products.forEach(product => {
+        productNameElement.add(new Option(product.name, product.id));
+    });
+}
+const reviewCountElement = document.querySelector(".count");
+if (reviewCountElement !== null) {
+    let numReviews = Number(window.localStorage.getItem("numReviews")) || 0;
+    numReviews++;
+    reviewCountElement.textContent = numReviews;
+    localStorage.setItem("numReviews", numReviews);
+}
