@@ -5,6 +5,20 @@
     --header-color: white;
     --header-accent: black;
     --header-alt-accent: grey;
+
+    --fieldsetborder: var(--header-background);/* #ddd;/**/
+    --fieldsetlegendcolor: var(--body-color);/* #445ba9;/**/
+    --formlabelcolor: var(--body-color); /* #9c2c13;/**/
+    --forminputbackgroundcolor: var(--header-background);/* #eee;/**/
+    --forminputbordercolor: var(--header-alt-accent);/* #999;/**/
+    --forminputcolor: var(--header-alt-accent);/* #999;/**/
+    --forminputrequiredleftbordercolor: red;/**/
+    --forminputvalidrequiredleftbordercolor: green;/**/
+    --formsubmitcolor: var(--header-color);/* #fff;/**/
+    --formsubmitlightcolor: var(--header-background);/* #9c2c13;/**/
+    --formsubmitdarkcolor: var(--header-accent);/*#6f200e;/**/
+    --formsubmitdarkcolorpercent: 25%;
+    --formsubmitshadowcolor: var(--header-alt-accent);/* #999;/**/
 }
 body {
     background-color: var(--body-background);
@@ -32,41 +46,71 @@ footer, footer > p {
     margin: 0;
     text-align: center;
 }
-.hero {
-    background-color: var(--page-alt-accent);
-    padding-bottom: .25rem;
+
+/*---------- FORM STYLING --------*/
+.product-rev-web-form fieldset {
+    margin: 2rem 0;
+    border: 1px solid var(--fieldsetborder);
+    border-radius: 6px;
+    padding: .5rem 2%;
 }
-.hero > picture > img {
+
+.product-rev-web-form legend {
+    color: var(--fieldsetlegendcolor);
+    padding: 0 .5rem;
+}
+
+.product-rev-web-form label {
+    display: block;
+    padding-top: 1rem;
+    color: var(--formlabelcolor);
+    font-size: .9rem;
+}
+
+.product-rev-web-form div {
+    padding-top: 1rem;
+    color: var(--fieldsetlegendcolor);
+    font-size: .9rem;
+}
+
+.product-rev-web-form input[type="text"],
+.product-rev-web-form input[type="date"],
+.product-rev-web-form select,
+.product-rev-web-form textarea,
+.product-rev-web-form input[type="number"] {
+    background-color:  var(--forminputbackgroundcolor);
+    display: block;
+    border: solid 1px var(--forminputbordercolor);
+    border-radius: 6px;
+    padding: .75rem;
+    color:var(--forminputcolor);
     width: 100%;
-    aspect-ratio: 1500 / 1000;
+    max-width: 400px;
+    appearance: none;
 }
-.card {
-    background-color: var(--page-color);
-    color: var(--page-background);
-    margin: 1rem;
+
+.product-rev-web-form input[type="radio"],
+.product-rev-web-form input[type="checkbox"] {
+    margin-right: 6px;
 }
-.card > h2 {
-    text-align: center;
-    padding: 1rem;
+
+.product-rev-web-form input[type="submit"] {
+    border: none;
+    background-image: repeating-radial-gradient(var(--formsubmitlightcolor), var(--formsubmitdarkcolor) var(--formsubmitdarkcolorpercent), var(--formsubmitlightcolor));
+    color: var(--formsubmitcolor);
+    border-radius: 6px;
+    padding: .75rem;
+    width: 96%;
+    max-width: 400px;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 4px var(--formsubmitshadowcolor);
 }
-.card > div {
-    display: grid;
-    grid-template-columns: auto 1fr 1fr auto;
-    gap: .25rem;
-    margin: .25rem;
+
+.product-rev-web-form input:required, #product-name {
+    border-left: solid 8px var(--forminputrequiredleftbordercolor);
 }
-.card > div > h3 {
-    grid-column: 2;
-    text-align: right;
-    margin: .25rem;
-}
-.card > div > p {
-    grid-column: 3;
-    padding-top: .25rem;
-    padding-bottom: .25rem;
-    margin: .25rem;
-}
-.weather > img {
-    margin: 0 33%;
-    width: 33%;
+
+.product-rev-web-form input:required:valid,
+#product-name {
+    border-left: solid 8px var(--forminputvalidrequiredleftbordercolor);
 }
