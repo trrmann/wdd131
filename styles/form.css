@@ -3,13 +3,14 @@
     --body-color: black;
     --header-background: tan;
     --header-color: white;
+    --color-mix-1: color-mix(in srgb, var(--header-background) 35%, var(--header-color));
     --header-accent: black;
     --header-alt-accent: grey;
 
     --fieldsetborder: var(--header-background);/* #ddd;/**/
     --fieldsetlegendcolor: var(--body-color);/* #445ba9;/**/
     --formlabelcolor: var(--body-color); /* #9c2c13;/**/
-    --forminputbackgroundcolor: var(--header-background);/* #eee;/**/
+    --forminputbackgroundcolor: var(--color-mix-1);/* #eee;/**/
     --forminputbordercolor: var(--header-alt-accent);/* #999;/**/
     --forminputcolor: var(--header-alt-accent);/* #999;/**/
     --forminputrequiredleftbordercolor: red;/**/
