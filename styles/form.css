@@ -1,0 +1,72 @@
+:root {
+    --body-background: lightblue;
+    --body-color: black;
+    --header-background: tan;
+    --header-color: white;
+    --header-accent: black;
+    --header-alt-accent: grey;
+}
+body {
+    background-color: var(--body-background);
+    color: var(--body-color);
+}
+header, footer {
+    background-color: var(--header-background);
+    color: var(--header-color);
+    padding: .5rem;
+}
+header > div, footer > p {
+    background-color: var(--header-accent);
+    padding: .5rem;
+}
+header > div > h1 {
+    text-align: center;
+}
+.line {
+    background-color: var(--header-alt-accent);
+    padding: 0;
+    height: .5rem;
+}
+footer, footer > p {
+    padding: .25rem;
+    margin: 0;
+    text-align: center;
+}
+.hero {
+    background-color: var(--page-alt-accent);
+    padding-bottom: .25rem;
+}
+.hero > picture > img {
+    width: 100%;
+    aspect-ratio: 1500 / 1000;
+}
+.card {
+    background-color: var(--page-color);
+    color: var(--page-background);
+    margin: 1rem;
+}
+.card > h2 {
+    text-align: center;
+    padding: 1rem;
+}
+.card > div {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    gap: .25rem;
+    margin: .25rem;
+}
+.card > div > h3 {
+    grid-column: 2;
+    text-align: right;
+    margin: .25rem;
+}
+.card > div > p {
+    grid-column: 3;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin: .25rem;
+}
+.weather > img {
+    margin: 0 33%;
+    width: 33%;
+}
