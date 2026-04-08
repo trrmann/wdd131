@@ -121,3 +121,7 @@ footer, footer > p {
 .product-rev-web-form input:required, #product-name:required {
     border-left: solid 8px var(--forminputrequiredleftbordercolor);
 }
+
+.response {
+    text-align: center;
+}
