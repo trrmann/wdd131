@@ -11,7 +11,7 @@
     --formlabelcolor: var(--body-color); /* #9c2c13;/**/
     --forminputbackgroundcolor: color-mix(in srgb, var(--header-background) 35%, var(--header-color));/* #eee;/**/
     --forminputbordercolor: var(--header-alt-accent);/* #999;/**/
-    --forminputcolor: var(--header-alt-accent);/* #999;/**/
+    --forminputcolor: var(--header-accent);/* #999;/**/
     --forminputrequiredleftbordercolor: color-mix(in srgb,red 75%,color-mix(in srgb, var(--header-background) 35%, var(--header-color))); /* red;/**/
     --forminputvalidrequiredleftbordercolor: color-mix(in srgb, green 75%, color-mix(in srgb, var(--header-background) 35%, var(--header-color)));/* green;/**/
     --formsubmitcolor: var(--header-color);/* #fff;/**/
@@ -69,8 +69,14 @@ footer, footer > p {
 
 .product-rev-web-form div {
     padding-top: 1rem;
+    margin-top: 1.25rem;
     color: var(--fieldsetlegendcolor);
     font-size: .9rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.product-rev-web-form div>span {
+    display: block;
 }
 
 .product-rev-web-form input[type="text"],
@@ -92,6 +98,7 @@ footer, footer > p {
 .product-rev-web-form input[type="radio"],
 .product-rev-web-form input[type="checkbox"] {
     margin-right: 6px;
+    padding: .75rem;
 }
 
 .product-rev-web-form input[type="submit"] {
@@ -106,11 +113,11 @@ footer, footer > p {
     box-shadow: 1px 1px 4px var(--formsubmitshadowcolor);
 }
 
-.product-rev-web-form input:required, #product-name {
-    border-left: solid 8px var(--forminputrequiredleftbordercolor);
+.product-rev-web-form input:required:valid,
+#product-name:required:valid {
+    border-left: solid 8px var(--forminputvalidrequiredleftbordercolor);
 }
 
-.product-rev-web-form input:required:valid,
-#product-name {
-    border-left: solid 8px var(--forminputvalidrequiredleftbordercolor);
+.product-rev-web-form input:required, #product-name:required {
+    border-left: solid 8px var(--forminputrequiredleftbordercolor);
 }
