@@ -714,4 +714,128 @@ footer {
     font-size: calc(6 * var(--relative-spacing-unit));
 }
 /**/
+
+/**/
+
+.hero picture img {
+    max-width: 648px;
+    max-height: 485px;
+}
+
+
+
+
+
+/**************************************Site Home tab Scytale Card Classes****************************/
+.scytale {
+    grid-row: 3;
+    border: 0px solid red;
+}
+.scytale.show {
+    display: grid;
+}
+
+.scytale picture {
+    grid-column: 1/5;
+    grid-row: 2;
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.scytale picture img {
+    max-width: 1192px;
+    max-height: 676px;
+    border: 0px solid red;
+}
+
+.scytale h2 {
+    grid-column: 1/15;
+    grid-row: 1;
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.scytale p {
+    grid-column: 5/15;
+    grid-row: 2;
+    border: 0px solid red;
+}
+
+/**************************************Site Home tab Substitution Card Classes****************************/
+.substitution {
+    grid-row: 4;
+    border: 0px solid red;
+}
+.substitution.show {
+    display: grid;
+}
+.substitution picture {
+    grid-column: 10/15;
+    grid-row: 2;
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.substitution picture img {
+    max-width: 1144px;
+    max-height: 704px;
+    border: 0px solid red;
+}
+
+.substitution h2 {
+    grid-column: 1/15;
+    grid-row: 1;
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.substitution p {
+    grid-column: 1/10;
+    grid-row: 2;
+    border: 0px solid red;
+}
+
+/**************************************Site Home tab Playfair Card Classes****************************/
+.playfair {
+    grid-row: 5;
+    border: 0px solid red;
+}
+.playfair.show {
+    display: grid;
+}
+.playfair picture {
+    grid-column: 1/5;
+    grid-row: 2;
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.playfair picture img {
+    max-width: 996px;
+    max-height: 812px;
+    border: 0px solid red;
+}
+
+.playfair h2 {
+    grid-column: 1/15;
+    grid-row: 1;
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.playfair p {
+    grid-column: 5/15;
+    grid-row: 2;
+    border: 0px solid red;
+}
+
+
+
+
+
+
+
+
+
+
 }

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Encryption</title>
+    <meta name="description"
+        content="WDD131 - Dynamic Web Fundamentals - Project - Manual Encryption - Site - Tracy R. Mann">
+    <meta name="author" content="Tracy R. Mann">
+    <link rel="preload" as="image" href="images/skeleton-key-white.svg">
+    <link rel="preload" as="image" href="images/skeleton-key-black.svg">
+    <link rel="preload" as="image" href="images/wireframe-mobile.svg">
+    <link rel="preload" as="image" href="images/wireframe-tablet.svg">
+    <link rel="preload" as="image" href="images/wireframe-laptop.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css">
+    <link rel="stylesheet" type="text/css" href="styles/tablet.css">
+    <link rel="stylesheet" type="text/css" href="styles/laptop.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header class="heading">
+        <p><span id="course-title"><img class="logo home-logo" src="images/skeleton-key-white.svg" height="1" width="3" alt="logo image">Manual Encryption<span id="hamburgerMenu"></span></span></p>
+        <nav>
+            <ul class="menulist">
+                <li class="menuitem home">
+                    <a href="index.html?tab=home">Home</a>
+                </li>
+                <li class="menuitem scytale">
+                    <a href="index.html?tab=scytale">Scytale</a>
+                </li>
+                <li class="menuitem substitution">
+                    <a href="index.html?tab=substitution">Substitution</a>
+                </li>
+                <li class="menuitem playfair">
+                    <a href="index.html?tab=playfair">Playfair</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="leftsidebar">X</div>
+    <main>
+        <!--
+            height: 1rem;957
+            width: 2.8537095088819226750261233019854rem;2731
+         -->
+        <h1 class="heading">Home</h1>
+        <div class="home-card hero">
+            <picture>
+                <source srcset="images/classical-259-194.webp" height="194" width="259" type="image/webp">
+                <source media="(min-width: 768px)" srcset="images/classical-518-388.webp" height="388" width="518">
+                <source media="(min-width: 1200px)" srcset="images/classical-648-485.webp" height="485" width="648">
+                <img src="images/originals/classical.jpg" alt="classical encryption hero image" height="194" width="259">
+            </picture>
+        </div>
+        <section class="home-card scytale">
+            <picture>
+                <source srcset="images/scytale-298-169.webp" height="169" width="298" type="image/webp">
+                <source media="(min-width: 768px)" srcset="images/scytale-596-338.webp" height="338" width="596">
+                <source media="(min-width: 1200px)" srcset="images/scytale-1192-676.webp" height="676" width="1192">
+                <img src="images/originals/scytale.jpg" alt="scytale demonstration image" height="169" width="298">
+            </picture>
+            <h2 class="heading">Scytale</h2>
+            <p class="info scytale-info">Scytale encryption was used by the ancient Spartans and Ancient Egyptians.  Typically, the king would have his rod that
+            he would wrap a strip of parchment around diagonally and then write the message down the length of the rod, only using
+            one letter or hieroglyph per cross section of parchment on the row.  Unraveled, the message would be made unreadable by
+            all of the characters in the messages being moved out of place to be able to read.  The receiving general or commander
+            would have another rod of the same length and diameter to take the encrypted message strip and wrap around in order to
+            read it as it was written.</p>
+        </section>
+        <section class="home-card substitution">
+            <picture>
+                <source srcset="images/substitution-286-176.webp" height="176" width="286" type="image/webp">
+                <source media="(min-width: 768px)" srcset="images/substitution-572-352.webp" height="352" width="572">
+                <source media="(min-width: 1200px)" srcset="images/substitution-1144-704.webp" height="704" width="1144">
+                <img src="images/originals/substitution.png" alt="substitution demonstration image" height="176" width="286">
+            </picture>
+            <h2 class="heading">Simple Substitution</h2>
+            <p class="info substitution-info">Simple Substitution Encryption is used currently mostly in newspapers as the Crypto-que Question used as a puzzle for
+            their subscribers.  It is where each letter in the alphabet is scrambled one by one with another letter only used once
+            each, where no letter is represented by its own same letter in the key.</p>
+        </section>
+        <section class="home-card playfair">
+            <picture>
+                <source srcset="images/playfair-249-203.webp" height="203" width="249" type="image/webp">
+                <source media="(min-width: 768px)" srcset="images/playfair-498-406.webp" height="406" width="498">
+                <source media="(min-width: 1200px)" srcset="images/playfair-996-812.webp" height="812" width="996">
+                <img src="images/originals/playfair.png" alt="playfair demonstration image" height="203" width="249">
+            </picture>
+            <h2 class="heading">Playfair</h2>
+            <p class="info playfair-info">Playfair encryption is also called five by five matrix encryption.  This was used heavily in World War II by both sides.
+             Due to the nature of a 5x5 grid only having 25 of 26 characters available, the extra letter needed a previously agreed
+            rule in handle that 26th case.  One of the most common rules used in World War II was to simplely omit the letter Q,
+            being its use is much more rare than other letters in the alphabet.  Another option was to use the letters I and J
+            interchangeably and once decrypted the reader would need to distinguish which letter it was based on context.  The key
+            also consists of column and row key letters that for the columns there cannot be a repeat in the columns and for the
+            rows there cannot be a repeat in the rows.  however, no such limitation exists of rows vs. columns.  The use of each of
+            the unique pairs of row and column will have a one-to-one relationship with a letter in the main body of 25 characters.</p>
+        </section>
+        <div class="scytale-form">
+            <form method="get" action="index.html?tab=scytale">
+                <label class="tab-label">tab<input class="tab-value" type="text" name="tab" value="scytale" readonly></label>
+                <fieldset>
+                    <legend>Key</legend>
+                    <label>Rod Diameter in characters*<input id="diameter" type="number" name="key" placeholder="5" min="3" required></label>
+                    <label>key name<input id="scytale-key-name" type="text" placeholder="my scytale key"></label>
+                    <input id="save-scytale-key-name" type="button" value="Save my Key">
+                    <input id="load-scytale-key-name" type="button" value="Load my Key">
+                    <input id="delete-scytale-key-name" type="button" value="Delete my Key">
+                </fieldset>
+                <fieldset class="message-fieldset">
+                    <legend>Message</legend>
+                    <label>Message*<textarea name="message" placeholder="Message text goes here." required></textarea></label>
+                    <input type="submit" name="direction" value="Encrypt">
+                    <input type="submit" name="direction" value="Decrypt">
+                </fieldset>
+            </form>
+        </div>
+        <div class="scytale-response">
+            <h2 class="response-heading">Original Message</h2>
+            <p class="scytale-message"></p>
+            <h2 class="response-heading">Key</h2>
+            <p>Rod Diameter in characters<span class="scytale-key"></span></p>
+            <h2 class="response-heading">Message</h2>
+            <p class="scytale-result"></p>
+        </div>
+        <div class="substitution-form">
+            <form method="get" action="index.html">
+                <label class="tab-label">tab<input class="tab-value" type="text" name="tab" value="substitution" readonly></label>
+                <fieldset>
+                    <legend>Key</legend>
+                    <label>key/value character pair*<input id="p01" type="text" name="p01" placeholder="ab" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p02" type="text" name="p02" placeholder="bz" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p03" type="text" name="p03" placeholder="cy" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p04" type="text" name="p04" placeholder="dx" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p05" type="text" name="p05" placeholder="ew" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p06" type="text" name="p06" placeholder="fv" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p07" type="text" name="p07" placeholder="gu" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p08" type="text" name="p08" placeholder="ht" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p09" type="text" name="p09" placeholder="is" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p10" type="text" name="p10" placeholder="jr" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p11" type="text" name="p11" placeholder="kq" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p12" type="text" name="p12" placeholder="lp" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p13" type="text" name="p13" placeholder="mo" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p14" type="text" name="p14" placeholder="na" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p15" type="text" name="p15" placeholder="om" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p16" type="text" name="p16" placeholder="pl" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p17" type="text" name="p17" placeholder="qk" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p18" type="text" name="p18" placeholder="rj" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p19" type="text" name="p19" placeholder="si" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p20" type="text" name="p20" placeholder="th" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p21" type="text" name="p21" placeholder="ug" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p22" type="text" name="p22" placeholder="vf" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p23" type="text" name="p23" placeholder="we" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p24" type="text" name="p24" placeholder="xd" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p25" type="text" name="p25" placeholder="yc" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key/value character pair*<input id="p26" type="text" name="p26" placeholder="zn" minlength="2" maxlength="2" pattern="[a-z]{2}" required></label>
+                    <label>key name<input id="substitution-key-name" type="text" placeholder="my simple substitution key"></label>
+                    <input id="save-substitution-key-name" type="button" value="Save my Key">
+                    <input id="load-substitution-key-name" type="button" value="Load my Key">
+                    <input id="delete-substitution-key-name" type="button" value="Delete my Key">
+                </fieldset>
+                <fieldset class="message-fieldset">
+                    <legend>Message</legend>
+                    <label>Message*<textarea name="message" placeholder="Message text goes here." required></textarea></label>
+                    <input type="submit" name="direction" value="Encrypt">
+                    <input type="submit" name="direction" value="Decrypt">
+                </fieldset>
+            </form>
+        </div>
+        <div class="substitution-response">
+            <h2 class="response-heading">Original Message</h2>
+            <p class="substitution-message"></p>
+            <h2 class="response-heading">Key</h2>
+            <div  class="substitution-key">
+                <table>
+                    <tr>
+                        <th id="sub-key">Key</th>
+                        <th id="k01">.</th>
+                        <th id="k02">.</th>
+                        <th id="k03">.</th>
+                        <th id="k04">.</th>
+                        <th id="k05">.</th>
+                        <th id="k06">.</th>
+                        <th id="k07">.</th>
+                        <th id="k08">.</th>
+                        <th id="k09">.</th>
+                        <th id="k10">.</th>
+                        <th id="k11">.</th>
+                        <th id="k12">.</th>
+                        <th id="k13">.</th>
+                        <th id="k14">.</th>
+                        <th id="k15">.</th>
+                        <th id="k16">.</th>
+                        <th id="k17">.</th>
+                        <th id="k18">.</th>
+                        <th id="k19">.</th>
+                        <th id="k20">.</th>
+                        <th id="k21">.</th>
+                        <th id="k22">.</th>
+                        <th id="k23">.</th>
+                        <th id="k24">.</th>
+                        <th id="k25">.</th>
+                        <th id="k26">.</th>
+                    </tr>
+                    <tr>
+                        <td id="sub-value">value</td>
+                        <td id="v01"></td>
+                        <td id="v02"></td>
+                        <td id="v03"></td>
+                        <td id="v04"></td>
+                        <td id="v05"></td>
+                        <td id="v06"></td>
+                        <td id="v07"></td>
+                        <td id="v08"></td>
+                        <td id="v09"></td>
+                        <td id="v10"></td>
+                        <td id="v11"></td>
+                        <td id="v12"></td>
+                        <td id="v13"></td>
+                        <td id="v14"></td>
+                        <td id="v15"></td>
+                        <td id="v16"></td>
+                        <td id="v17"></td>
+                        <td id="v18"></td>
+                        <td id="v19"></td>
+                        <td id="v20"></td>
+                        <td id="v21"></td>
+                        <td id="v22"></td>
+                        <td id="v23"></td>
+                        <td id="v24"></td>
+                        <td id="v25"></td>
+                        <td id="v26"></td>
+                    </tr>
+                </table>
+            </div>
+            <h2 class="response-heading">Message</h2>
+            <p class="substitution-result"></p>
+        </div>
+        <div class="playfair-form">
+            <form method="get" action="index.html">
+                <label class="tab-label">tab<input class="tab-value" type="text" name="tab" value="playfair" readonly></label>
+                <fieldset>
+                    <legend>Key</legend>
+                    <label>column keys*<input id="columns" type="text" name="columns" placeholder="abcde" minlength="5" maxlength="5" pattern="[a-z]{5}" required></label>
+                    <label>row keys*<input id="rows" type="text" name="rows" placeholder="edcba" minlength="5" maxlength="5" pattern="[a-z]{5}" required></label>
+                    <label>first row values*<input id="row1" type="text" name="row1" placeholder="abcde" minlength="5" maxlength="5" pattern="[a-z]{5}" required></label>
+                    <label>second row values*<input id="row2" type="text" name="row2" placeholder="fghij" minlength="5" maxlength="5" pattern="[a-z]{5}" required></label>
+                    <label>third row values*<input id="row3" type="text" name="row3" placeholder="klmno" minlength="5" maxlength="5" pattern="[a-z]{5}" required></label>
+                    <label>forth row values*<input id="row4" type="text" name="row4" placeholder="prstu" minlength="5" maxlength="5" pattern="[a-z]{5}" required></label>
+                    <label>fifth row values*<input id="row5" type="text" name="row5" placeholder="vwxyz" minlength="5" maxlength="5" pattern="[a-z]{5}" required></label>
+                    <label>key name<input id="playfair-key-name" type="text" placeholder="my playfair key"></label>
+                    <input id="save-playfair-key-name" type="button" value="Save my Key">
+                    <input id="load-playfair-key-name" type="button" value="Load my Key">
+                    <input id="delete-playfair-key-name" type="button" value="Delete my Key">
+                </fieldset>
+                <fieldset class="message-fieldset">
+                    <legend>Message</legend>
+                    <label>Message*<textarea name="message" placeholder="Message text goes here." required></textarea></label>
+                    <input type="submit" name="direction" value="Encrypt">
+                    <input type="submit" name="direction" value="Decrypt">
+                </fieldset>
+            </form>
+        </div>
+        <div class="playfair-response">
+            <h2 class="response-heading">Original Message</h2>
+            <p class="playfair-message"></p>
+            <h2 class="response-heading">Key</h2>
+            <div class="playfair-key">
+                <table>
+                    <tr>
+                        <th id="play-key">*</th>
+                        <th id="c01">.</th>
+                        <th id="c02">.</th>
+                        <th id="c03">.</th>
+                        <th id="c04">.</th>
+                        <th id="c05">.</th>
+                    </tr>
+                    <tr>
+                        <th id="r01">.</th>
+                        <td id="v01-01"></td>
+                        <td id="v01-02"></td>
+                        <td id="v01-03"></td>
+                        <td id="v01-04"></td>
+                        <td id="v01-05"></td>
+                    </tr>
+                    <tr>
+                        <th id="r02">.</th>
+                        <td id="v02-01"></td>
+                        <td id="v02-02"></td>
+                        <td id="v02-03"></td>
+                        <td id="v02-04"></td>
+                        <td id="v02-05"></td>
+                    </tr>
+                    <tr>
+                        <th id="r03">.</th>
+                        <td id="v03-01"></td>
+                        <td id="v03-02"></td>
+                        <td id="v03-03"></td>
+                        <td id="v03-04"></td>
+                        <td id="v03-05"></td>
+                    </tr>
+                    <tr>
+                        <th id="r04">.</th>
+                        <td id="v04-01"></td>
+                        <td id="v04-02"></td>
+                        <td id="v04-03"></td>
+                        <td id="v04-04"></td>
+                        <td id="v04-05"></td>
+                    </tr>
+                    <tr>
+                        <th id="r05">.</th>
+                        <td id="v05-01"></td>
+                        <td id="v05-02"></td>
+                        <td id="v05-03"></td>
+                        <td id="v05-04"></td>
+                        <td id="v05-05"></td>
+                    </tr>
+                </table>
+            </div>
+            <h2 class="response-heading">Message</h2>
+            <p class="playfair-result"></p>
+        </div>
+    </main>
+    <div class="rightsidebar">X</div>
+    <footer class="heading">
+        <p><span id="copyright"></span><span id="currentyear"></span> Tracy R. Mann - South Carolina</p>
+        <p id="lastModified"></p>
+        <span class="site-plan"><a href="siteplan.html">site plan</a></span>
+    </footer>
+</body>
+
+</html>

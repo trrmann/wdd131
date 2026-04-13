@@ -681,4 +681,123 @@ footer {
     font-size: calc(6 * var(--relative-spacing-unit));
 }
 /**/
+
+
+.home-card.hero picture img {
+    max-width: 518px;
+    max-height: 388px;
+}
+
+
+/**************************************Site Home tab Scytale Card Classes****************************/
+.home-card.scytale {
+    grid-row: 3;
+    border: 0px solid red;
+}
+.home-card.scytale.show {
+    display: grid;
+}
+
+.home-card.scytale picture {
+    grid-column: 1/5;
+    grid-row: 2;
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.home-card.scytale picture img {
+    max-width: 596px;
+    max-height: 338px;
+    border: 0px solid red;
+}
+
+.home-card.scytale h2 {
+    grid-column: 1/15;
+    grid-row: 1;
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.home-card.scytale p {
+    grid-column: 5/15;
+    grid-row: 2;
+    border: 0px solid red;
+}
+
+/**************************************Site Home tab Substitution Card Classes****************************/
+.home-card.substitution {
+    grid-row: 4;
+    border: 0px solid red;
+}
+.home-card.substitution.show {
+    display: grid;
+}
+.home-card.substitution picture {
+    grid-column: 10/15;
+    grid-row: 2;
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.home-card.substitution picture img {
+    max-width: 572px;
+    max-height: 352px;
+    border: 0px solid red;
+}
+
+.home-card.substitution h2 {
+    grid-column: 1/15;
+    grid-row: 1;
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.home-card.substitution p {
+    grid-column: 1/10;
+    grid-row: 2;
+    border: 0px solid red;
+}
+
+/**************************************Site Home tab Playfair Card Classes****************************/
+.home-card.playfair {
+    grid-row: 5;
+    border: 0px solid red;
+}
+.home-card.playfair.show {
+    display: grid;
+}
+.home-card.playfair picture {
+    grid-column: 1/5;
+    grid-row: 2;
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.home-card.playfair picture img {
+    max-width: 498px;
+    max-height: 406px;
+    border: 0px solid red;
+}
+
+.home-card.playfair h2 {
+    grid-column: 1/15;
+    grid-row: 1;
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.home-card.playfair p {
+    grid-column: 5/15;
+    grid-row: 2;
+    border: 0px solid red;
+}
+
+
+
+
+
+
+
+
+
 }
