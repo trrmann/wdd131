@@ -1,33 +1,63 @@
-function scytaleTransformMessage(direction, key, message) {
+function mod(n, d) {
+    const f = (n/d);
+    const u = (f * d);
+    const r = n - u;
+    return r;
+}
+function scytaleTransformMessage(direction, keyString, message) {
+    let key = parseInt(keyString, 10);
     let rodLength = Math.ceil(message.length / key);
+    let grid = Array(key);
     let result = "";
-    const temp = new Array(message.length);
+    let row = 0;
+    let col = 0;
     switch (direction) {
         case "Encrypt":
-            message.split("").forEach((letter, index) => {
-                const row = index % key;
-                const col = Math.floor(index / key);
-                const targetIndex = row * rodLength + col;
-                if (targetIndex < message.length) {
-                    temp[targetIndex] = letter;
+            row = 0;
+            col = 0;
+            message.split("").forEach((letter) => {
+                if (row === key) {
+                    row = 0;
+                    col++;
                 }
+                if (!Array.isArray(grid[row])) {
+                    grid[row] = Array(rodLength).fill(" ");
+                }
+                grid[row][col] = letter;
+                console.log(`r=${row} c=${col} t=${letter} k=${key} s=${rodLength} l=${message.length}`)
+                row++;
             });
-            temp.forEach(letter => {
-                result = `${result}${letter}`;
+            grid.forEach(col => {
+                col.forEach(character => {
+                    result = `${result}${character}`;                
+                });
             });
             return result;
         default:
-            message.split("").forEach((letter, index) => {
-                const row = index % rodLength;
-                const col = Math.floor(index / rodLength);
-                const targetIndex = row * key + col;
-                if (targetIndex < message.length) {
-                    temp[targetIndex] = letter;
+            row = 0;
+            col = 0;
+            message.split("").forEach((letter) => {
+                if (col === rodLength) {
+                    col = 0
+                    row++;
                 }
+                if (!Array.isArray(grid[row])) {
+                    grid[row] = Array(rodLength).fill(" ");
+                }
+                grid[row][col] = letter;
+                console.log(`r=${row} c=${col} t=${letter} k=${key} s=${rodLength} l=${message.length}`)
+                col++;
             });
-            temp.forEach(letter => {
-                result = `${result}${letter}`;
-            });
+            row = 0;
+            col = 0;
+            while (row < key && col < rodLength) {
+                result = `${result}${grid[row][col]}`;
+                row++;
+                if (row === key) {
+                    row = 0;
+                    col++;
+                }                
+            }
             return result;
     }
 }
