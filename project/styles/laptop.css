@@ -13,6 +13,10 @@ header {
     padding: var(--quad-spacing-unit-left-only);
     margin: var(--quad-spacing-unit-right-only);
 }
+.logo {
+    height: calc(1.5 * 1rem);
+    width: calc(1.5 * 2.8537095088819226750261233019854rem);
+}
 nav {
     margin: var(--no-spacing-unit-all-around);
     color: var(--menu-color);
