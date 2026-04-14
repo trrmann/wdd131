@@ -32,7 +32,7 @@
 }
 .home-card picture {
     display: block;
-    width: calc(100%-calc(2 * var(--quad-spacing-unit)));
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
     padding: calc(0 * var(--quad-spacing-unit)) 0;
     border: 0px solid red;
 }
