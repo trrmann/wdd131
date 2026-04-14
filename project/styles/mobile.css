@@ -58,7 +58,7 @@ html {
     padding: var(--relative-spacing-unit-all-around);
     color: var(--body-color);
     background-color: var(--body-background);
-    font-display: swap;/*optional*/
+    font-display: optional;
     font-family: var(--font-body);
     font-size: var(--font-size);
     text-align: left;
