@@ -7,18 +7,28 @@
     <meta name="description"
         content="WDD131 - Dynamic Web Fundamentals - Project - Manual Encryption - Site Plan - Tracy R. Mann">
     <meta name="author" content="Tracy R. Mann">
-    <link rel="preload" as="image" href="images/skeleton-key-white.svg">
-    <link rel="preload" as="image" href="images/skeleton-key-black.svg">
+    <link rel="preload" as="image" href="images/skeleton-key-white.svg" fetchpriority=high>
+    <link rel="preload" as="image" href="images/skeleton-key-black.svg" fetchpriority=high>
+    <link rel="preload" href="styles/mobile.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        fetchpriority=auto>
+    <link rel="preload" href="styles/mobile-common.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        fetchpriority=auto>
+    <link rel="preload" href="styles/mobile-site-plan.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        fetchpriority=low>
+    <link rel="preload" href="styles/tablet.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        fetchpriority=low>
+    <link rel="preload" href="styles/laptop.css" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        fetchpriority=low>
     <link rel="preload" as="image" href="images/wireframe-mobile.svg">
     <link rel="preload" as="image" href="images/wireframe-tablet.svg">
     <link rel="preload" as="image" href="images/wireframe-laptop.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="styles/mobile.css">
     <link rel="stylesheet" type="text/css" href="styles/mobile-common.css">
     <link rel="stylesheet" type="text/css" href="styles/mobile-site-plan.css">
-    <link rel="stylesheet" type="text/css" href="styles/mobile-site.css">
     <link rel="stylesheet" type="text/css" href="styles/tablet.css">
     <link rel="stylesheet" type="text/css" href="styles/laptop.css">
     <script src="scripts/getdates.js" defer></script>
