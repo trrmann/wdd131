@@ -1,0 +1,418 @@
+/***************************************************************************************************/
+/**************************************Site Specific Classes****************************************/
+/***************************************************************************************************/
+
+/**************************************Site Home tab Classes****************************/
+
+.home-card {
+    margin: 0rem 0rem var(--quad-spacing-unit) 0rem;
+    border: 0px solid var(--body-color);
+    border-radius: var(--no-spacing-unit-all-around);
+    width: 100%;
+    padding: var(--no-spacing-unit-all-around);
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: auto repeat(12, 1fr) auto;
+    grid-template-rows: calc(17 * var(--relative-spacing-unit)) auto calc(8 * var(--relative-spacing-unit)) auto;
+    gap: 0;
+}
+.home-card h2 {
+    grid-column: 1/15;
+    grid-row: 1;
+    margin: var(--no-spacing-unit-all-around);
+    border: 0px solid var(--body-color);
+    border-radius: var(--no-spacing-unit-all-around);
+    width: 100%;
+    height: calc(8 * var(--relative-spacing-unit));
+    padding: var(--quad-spacing-unit-all-around);
+    text-align: center;
+    vertical-align: middle;
+    color: var(--body-color);
+    background-color: var(--body-background);
+}
+.home-card picture {
+    display: block;
+    width: calc(100%-calc(2 * var(--quad-spacing-unit)));
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+.home-card picture img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border: 0px solid red;
+}
+.home-card p {
+    text-align: left;
+}
+.scytale-form form fieldset,
+.substitution-form form fieldset,
+.playfair-form form fieldset {
+    margin: 2rem 0;
+    border: 1px solid var(--fieldsetborder);
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+.scytale-form form fieldset.message-fieldset,
+.substitution-form form fieldset.message-fieldset,
+.playfair-form form fieldset.message-fieldset {
+    border: none;
+}
+.scytale-form form legend,
+.substitution-form form legend,
+.playfair-form form legend {
+    color: var(--fieldsetlegendcolor);
+    padding: 0 .5rem;
+}
+.scytale-form form legend.message-fieldset legend,
+.substitution-form form legend.message-fieldset legend,
+.playfair-form form legend.message-fieldset legend {
+    display: none;
+}
+.scytale-form form label,
+.substitution-form form label,
+.playfair-form form label {
+    display: block;
+    padding-top: 1rem;
+    color: var(--formlabelcolor);
+    font-size: .9rem;
+}
+.scytale-form form label.tab-label,
+.substitution-form form label.tab-label,
+.playfair-form form label.tab-label {
+    display: none;
+}
+.scytale-form form div,
+.substitution-form form div,
+.playfair-form form div {
+    padding-top: 1rem;
+    margin-top: 1.25rem;
+    color: var(--fieldsetlegendcolor);
+    font-size: .9rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.scytale-form form div>span,
+.substitution-form form div>span,
+.playfair-form form div>span {
+    display: block;
+}
+.scytale-form form input[type="text"],
+.substitution-form form input[type="text"],
+.playfair-form form input[type="text"],
+.scytale-form form input[type="date"],
+.substitution-form form input[type="date"],
+.playfair-form form input[type="date"],
+.scytale-form form select,
+.substitution-form form select,
+.playfair-form form select,
+.scytale-form form textarea,
+.substitution-form form textarea,
+.playfair-form form textarea,
+.scytale-form form input[type="number"],
+.substitution-form form input[type="number"],
+.playfair-form form input[type="number"] {
+    background-color: var(--forminputbackgroundcolor);
+    display: block;
+    border: solid 1px var(--forminputbordercolor);
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--forminputcolor);
+    width: 90%;
+    max-width: 400px;
+    appearance: none;
+}
+.scytale-form form input[type="text"].tab-value,
+.substitution-form form input[type="text"].tab-value,
+.playfair-form form input[type="text"].tab-value {
+    display: none;
+}
+.scytale-form form input[type="button"],
+.substitution-form form input[type="button"],
+.playfair-form form input[type="button"] {
+    background-color: var(--forminputbackgroundcolor);
+        display: block;
+        border: solid 1px var(--forminputbordercolor);
+        border-radius: 6px;
+        padding: .75rem;
+        margin: .5rem;
+        color: var(--forminputcolor);
+        width: 90%;
+        max-width: 400px;
+        appearance: none;
+}
+.scytale-form form input[type="button"]:hover,
+.substitution-form form input[type="button"]:hover,
+.playfair-form form input[type="button"]:hover {
+    background-color: var(--forminputcolor);
+    color: var(--forminputbackgroundcolor);
+}
+.scytale-form form input[type="radio"],
+.substitution-form form input[type="radio"],
+.playfair-form form input[type="radio"],
+.scytale-form form input[type="checkbox"],
+.substitution-form form input[type="checkbox"],
+.playfair-form form input[type="checkbox"] {
+    margin-right: 6px;
+    padding: .75rem;
+}
+.scytale-form form input[type="submit"],
+.substitution-form form input[type="submit"],
+.playfair-form form input[type="submit"] {
+    border: none;
+    background-image: repeating-radial-gradient(var(--formsubmitlightcolor), var(--formsubmitdarkcolor) var(--formsubmitdarkcolorpercent), var(--formsubmitlightcolor));
+    color: var(--formsubmitcolor);
+    border-radius: 6px;
+    padding: .75rem;
+    max-width: 400px;
+    width: 98%;
+    margin: 1rem 2% 1rem 2%;
+    box-shadow: 1px 1px 4px var(--formsubmitshadowcolor);
+}
+.scytale-form form input:required:valid,
+.substitution-form form input:required:valid,
+.playfair-form form input:required:valid,
+.scytale-form form textarea:required:valid,
+.substitution-form form textarea:required:valid,
+.playfair-form form textarea:required:valid {
+    border-left: solid 8px var(--forminputvalidrequiredleftbordercolor);
+}
+.scytale-form form input:required,
+.substitution-form form input:required,
+.playfair-form form input:required,
+.scytale-form form textarea:required,
+.substitution-form form textarea:required,
+.playfair-form form textarea:required {
+    border-left: solid 8px var(--forminputrequiredleftbordercolor);
+}
+
+/**************************************Site Home tab Hero Card Classes****************************/
+
+.home-card.hero {
+    grid-row: 2;
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    padding: 0;
+    border: 0px solid red;
+}
+.home-card.hero.hide {
+    display: none;
+}
+.home-card.hero.show {
+    display: block;
+}
+.home-card.hero picture {
+    padding: calc(3 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+.home-card.hero picture img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 259px;
+    height: 100%;
+    max-height: 194px;
+    border: 0px solid red;
+}
+.home-card.hero.hide picture img {
+    display: none;
+}
+.home-card.hero.show picture img {
+    display: block;
+}
+/**************************************Site Home tab Scytale Card Classes****************************/
+.home-card.scytale {
+    grid-row: 3;
+    border: 0px solid red;
+}
+.home-card.scytale.hide {
+    display: none;
+}
+.home-card.scytale.show {
+    display: block;
+}
+.home-card.scytale picture {
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.home-card.scytale picture img {
+    max-width: 298px;
+    max-height: 169px;
+    border: 0px solid red;
+}
+
+.home-card.scytale h2 {
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.home-card.scytale p {
+    border: 0px solid red;
+}
+
+/**************************************Site Home tab Substitution Card Classes****************************/
+.home-card.substitution {
+    grid-row: 4;
+    border: 0px solid red;
+}
+.home-card.substitution.hide {
+    display: none;
+}
+.home-card.substitution.show {
+    display: block;
+}
+.home-card.substitution picture {
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.home-card.substitution picture img {
+    max-width: 286px;
+    max-height: 176px;
+    border: 0px solid red;
+}
+
+.home-card.substitution h2 {
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.home-card.substitution p {
+    border: 0px solid red;
+}
+
+/**************************************Site Home tab Playfair Card Classes****************************/
+.home-card.playfair {
+    grid-row: 5;
+    border: 0px solid red;
+}
+.home-card.playfair.hide {
+    display: none;
+}
+.home-card.playfair.show {
+    display: block;
+}
+.home-card.playfair picture {
+    padding: calc(0 * var(--quad-spacing-unit)) 0;
+    border: 0px solid red;
+}
+
+.home-card.playfair picture img {
+    max-width: 249px;
+    max-height: 203px;
+    border: 0px solid red;
+}
+
+.home-card.playfair h2 {
+    width: calc(100% - calc(2 * var(--quad-spacing-unit)));
+    border: 0px solid red;
+}
+
+.home-card.playfair p {
+    border: 0px solid red;
+}
+
+/**************************************Site Scytale tab Form Classes****************************/
+
+.scytale-form {
+    grid-row: 6;
+    grid-column: 1/6;
+    border: 0px solid red;
+}
+.scytale-form.hide {
+    display: none;
+}
+.scytale-form.show {
+    display: block;
+}
+.scytale-form form, .scytale-form textarea, .scytale-form form input {
+    display: block;
+}
+
+/**************************************Site Scytale tab Result Classes****************************/
+
+.scytale-response {
+    grid-row: 7;
+    grid-column: 1/6;
+    border: 0px solid red;
+}
+.scytale-response.hide {
+    display: none;
+}
+.scytale-response.show {
+    display: block;
+}
+.scytale-key {
+    margin-left: 1rem;
+}
+
+/**************************************Site Substitution tab Form Classes****************************/
+
+
+.substitution-form {
+    grid-row: 8;
+    grid-column: 1/6;
+    border: 0px solid red;
+    display: block;
+}
+.substitution-form.hide {
+    display: none;
+}
+.substitution-form.show {
+    display: block;
+}
+.substitution-form form,
+.substitution-form textarea,
+.substitution-form form input {
+    display: block;
+}
+
+/**************************************Site Substitution tab Result Classes****************************/
+
+.substitution-response {
+    grid-row: 9;
+    grid-column: 1/6;
+    border: 0px solid red;
+}
+.substitution-response.hide {
+    display: none;
+}
+.substitution-response.show {
+    display: block;
+}
+
+/**************************************Site Playfair tab Form Classes****************************/
+
+.playfair-form {
+    grid-row: 10;
+    grid-column: 1/6;
+    border: 0px solid red;
+}
+.playfair-form.hide {
+    display: none;
+}
+.playfair-form.show {
+    display: block;
+}
+.playfair-form form {
+    display: block;
+}
+.playfair-form form,
+.playfair-form textarea,
+.playfair-form form input {
+    display: block;
+}
+
+/**************************************Site Playfair tab Result Classes****************************/
+
+.playfair-response {
+    grid-row: 11;
+    grid-column: 1/6;
+    border: 0px solid red;
+}
+.playfair-response.hide {
+    display: none;
+}
+.playfair-response.show {
+    display: block;
+}
