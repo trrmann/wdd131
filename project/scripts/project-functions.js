@@ -16,29 +16,8 @@ function scytaleTransformMessage(direction, keyString, message) {
             row = 0;
             col = 0;
             message.split("").forEach((letter) => {
-                if (row === key) {
-                    row = 0;
-                    col++;
-                }
-                if (!Array.isArray(grid[row])) {
-                    grid[row] = Array(rodLength).fill(" ");
-                }
-                grid[row][col] = letter;
-                console.log(`r=${row} c=${col} t=${letter} k=${key} s=${rodLength} l=${message.length}`)
-                row++;
-            });
-            grid.forEach(col => {
-                col.forEach(character => {
-                    result = `${result}${character}`;                
-                });
-            });
-            return result;
-        default:
-            row = 0;
-            col = 0;
-            message.split("").forEach((letter) => {
                 if (col === rodLength) {
-                    col = 0
+                    col = 0;
                     row++;
                 }
                 if (!Array.isArray(grid[row])) {
@@ -50,13 +29,39 @@ function scytaleTransformMessage(direction, keyString, message) {
             });
             row = 0;
             col = 0;
-            while (row < key && col < rodLength) {
-                result = `${result}${grid[row][col]}`;
-                row++;
-                if (row === key) {
+            while ((row < key) && (col < rodLength)) {
+                if (row == key) {
                     row = 0;
                     col++;
-                }                
+                }
+                result = `${result}${character}`;
+                row++                
+            }
+            return result;
+        default:
+            row = 0;
+            col = 0;
+            message.split("").forEach((letter) => {
+                if (row === key) {
+                    row = 0
+                    col++;
+                }
+                if (!Array.isArray(grid[row])) {
+                    grid[row] = Array(rodLength).fill(" ");
+                }
+                grid[row][col] = letter;
+                console.log(`r=${row} c=${col} t=${letter} k=${key} s=${rodLength} l=${message.length}`)
+                row++;
+            });
+            row = 0;
+            col = 0;
+            while (row < key && col < rodLength) {
+                if (col == rodLength) {
+                    col = 0;
+                    row++;
+                }
+                result = `${result}${character}`;
+                col++;
             }
             return result;
     }
