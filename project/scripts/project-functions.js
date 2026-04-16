@@ -34,7 +34,7 @@ function scytaleTransformMessage(direction, keyString, message) {
                     row = 0;
                     col++;
                 }
-                result = `${result}${character}`;
+                result = `${result}${grid[row][col]}`;
                 row++                
             }
             return result;
@@ -60,7 +60,7 @@ function scytaleTransformMessage(direction, keyString, message) {
                     col = 0;
                     row++;
                 }
-                result = `${result}${character}`;
+                result = `${result}${grid[row][col]}`;
                 col++;
             }
             return result;
