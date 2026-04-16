@@ -30,7 +30,7 @@ function scytaleTransformMessage(direction, keyString, message) {
             row = 0;
             col = 0;
             while ((row < key) && (col < rodLength)) {
-                if (row == key) {
+                if (row === key) {
                     row = 0;
                     col++;
                 }
@@ -56,7 +56,7 @@ function scytaleTransformMessage(direction, keyString, message) {
             row = 0;
             col = 0;
             while (row < key && col < rodLength) {
-                if (col == rodLength) {
+                if (col === rodLength) {
                     col = 0;
                     row++;
                 }
