@@ -7,6 +7,7 @@ function mod(n, d) {
 function scytaleTransformMessage(direction, keyString, message) {
     let key = parseInt(keyString, 10);
     let rodLength = Math.ceil(message.length / key);
+    //let resultSize = key * rodLength;
     let grid = Array(key);
     let result = "";
     let row = 0;
@@ -24,21 +25,23 @@ function scytaleTransformMessage(direction, keyString, message) {
                     grid[row] = Array(rodLength).fill(" ");
                 }
                 grid[row][col] = letter;
-                console.log(`r=${row} c=${col} t=${letter} k=${key} s=${rodLength} l=${message.length}`)
+                //console.log(`r=${row} c=${col} t=${letter} k=${key} s=${rodLength} l=${message.length}`)
                 col++;
             });
-            row = 0;
-            col = 0;
-            while ((row < key) || (col < rodLength)) {
-                if (row === key) {
-                    row = 0;
-                    col++;
+            for (col = 0; col < rodLength; col++) {
+                for (row = 0; row < key; row++) {
+                    result = `${result}${grid[row][col]}`;
                 }
-                result = `${result}${grid[row][col]}`;
-                row++                
             }
+            //console.log(`original length:  ${message.length}`);
+            //console.log(`result length:  ${result.length}`);
+            //const decryptTest = scytaleTransformMessage("Decrypt", keyString, result);
+            //console.log(`original:  ${message}`);
+            //console.log(`result:  ${result}`);
+            //console.log(`confirm:  ${decryptTest}`);
             return result;
         default:
+            //rodLength++;
             row = 0;
             col = 0;
             message.split("").forEach((letter) => {
@@ -50,18 +53,13 @@ function scytaleTransformMessage(direction, keyString, message) {
                     grid[row] = Array(rodLength).fill(" ");
                 }
                 grid[row][col] = letter;
-                console.log(`r=${row} c=${col} t=${letter} k=${key} s=${rodLength} l=${message.length}`)
+                //console.log(`r=${row} c=${col} t=${letter} k=${key} s=${rodLength} l=${message.length}`)
                 row++;
             });
-            row = 0;
-            col = 0;
-            while ((row < key) || (col < rodLength)) {
-                if (col === rodLength) {
-                    col = 0;
-                    row++;
+            for (row = 0; row < key; row++) {
+                for (col = 0; col < rodLength; col++) {
+                    result = `${result}${grid[row][col]}`;
                 }
-                result = `${result}${grid[row][col]}`;
-                col++;
             }
             return result;
     }
