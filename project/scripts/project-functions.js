@@ -137,7 +137,7 @@ function tabConfig(tab, messages) {
                 const scytaleKeyElement = document.querySelector(".scytale-key");
                 scytaleKeyElement.textContent = (new URLSearchParams(window.location.search)).getAll("key");
                 const scytaleResultElement = document.querySelector(".scytale-result");
-                scytaleResultElement.textContent = scytaleTransformMessage((new URLSearchParams(window.location.search)).getAll("direction")[0], (new URLSearchParams(window.location.search)).getAll("key")[0], messages[0]);
+                scytaleResultElement.textContent = `'${scytaleTransformMessage((new URLSearchParams(window.location.search)).getAll("direction")[0], (new URLSearchParams(window.location.search)).getAll("key")[0], messages[0])}'`;
             } else {
                 updateView(["hero", "home-card.scytale", "home-card.substitution", "home-card.playfair", "substitution-form", "substitution-response", "playfair-form", "playfair-response", "scytale-response"], ["scytale-form"]);
             }
